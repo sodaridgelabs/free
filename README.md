@@ -1,6 +1,10 @@
 # Free
 
-TODO: Write a gem description
+Free is a gem that allows for painless integration of timeslots into your Rails app. Say for intance, you have Users who are busy during different hours of the day. You'd like them to input their schedules by selecting timeslot boxes in a grid. Then you'd like to do computation with that data, like find who's available during a certain timeslot, or find which timeslots are completely open. 
+
+Free is designed for these types of applications. It stores timeslot data as bit fields, and uses bitmasking techniques in its computations, so it's extremely fast and efficient, and doesn't require any new database tables.
+
+NOTE: This gem is in early development right now, and does not yet work. Stay tuned for a working version, and please pitch in and help if you'd like to.
 
 ## Installation
 
@@ -33,7 +37,7 @@ You'll notice that your User model is now implementing free with its timeslots a
 In order to find other users who have overlapping timeslots with john, use the overlapping method:
 
     john = User.find(1)
-    User.ovlapping(john)
+    User.overlapping(john)
 
 ## Contributing
 
